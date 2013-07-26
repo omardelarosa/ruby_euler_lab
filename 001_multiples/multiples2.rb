@@ -19,19 +19,20 @@ def solver(n)
     counter = 1
 
     #intialize our accumulator at 0
-    accumulator = 0
+    array_of_valid_nums = []
 
     #start a loop
     while counter <= n
         #output the current value of counter 
         
         if is_n_multiple_of_x(counter,3) || is_n_multiple_of_x(counter,5)
-            accumulator += counter
+            array_of_valid_nums << counter
         end
         #increment our counter
         counter+=1
     end
-    puts "The Answer is: "+accumulator.to_s
+    answer = sum_of_list(array_of_valid_nums)
+    puts "The Answer is: "+answer.to_s
 end
 
 #1. count to 1000
