@@ -42,11 +42,22 @@ end
 
 list = [] #accumulator as a list
 
-(1..4000).each do |num|
+# (1..100).each do |num|
+#     fib_num = fib_george(num)
+#     if fib_num && is_n_multiple_of_x(fib_num,2)
+#         list.push(fib_num)
+#     end
+# end
+
+fib_num = 0
+num = 0
+
+while fib_num < 4000000
     fib_num = fib_george(num)
     if fib_num && is_n_multiple_of_x(fib_num,2)
         list.push(fib_num)
     end
+    num+=1
 end
 
 puts list.reduce(:+)
